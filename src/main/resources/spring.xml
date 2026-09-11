@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- NOW IT WILL CREATE THE TWO OBJECT -->
+
+<!--    <bean id="alien1" class="org.example.Alien">-->
+<!--    </bean>-->
+
+<!--    <bean id="alien2" class="org.example.Alien">-->
+<!--    </bean>-->
+
+    <!-- ID IS OPTIONAL   -->
+
+    <bean id="alien" class="org.example.Alien">
+    </bean>
+
+    <bean id="lap" class="org.example.Laptop">
+    </bean>
+
+</beans>

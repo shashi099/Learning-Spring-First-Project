@@ -1,0 +1,19 @@
+It is a maven project
+
+CREATE A FOLDER NAME resources AND ADD THE FILE spring.xml(file name can be anything)
+spring.xml
+
+Search on chrome = spring bean configuration xml file
+AND ADD configuration
+
+ye line object create karta hai
+    ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+    AND WE ALSO NEED TO ADD THESE LINES IN SPRING.XML FILE FOR OBJECT CREATION
+        <bean id="alien" class="org.example.Alien">
+        </bean>
+
+
+Aur ye line object call karta hai
+    context.getBean("alien");
+
