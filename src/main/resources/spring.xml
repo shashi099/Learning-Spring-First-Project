@@ -20,11 +20,21 @@
 
     <bean id="alien" class="org.example.Alien">
 <!--        setter injection for set the value of the variable -->
-        <property name="age" value="21"></property>
+<!--        <property name="age" value="21"></property>-->
 
 <!--     SO NOW WE HAVE OBJECT lap1 SO WE NEED TO INJECT OR CONNECT TO
          lap VARIABLE WITH THE OBJECT    -->
-        <property name="lap" ref="lap1" ></property>
+<!--        <property name="lap" ref="lap1" ></property>-->
+
+<!--        Constructor Injection-->
+        <constructor-arg index="0" value="21"/>
+        <constructor-arg index="1" ref="lap1"/>
+
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="lap" ref="lap1"/>-->
+
+
+
     </bean>
 
     <bean id="lap" class="org.example.Laptop">

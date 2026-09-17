@@ -8,6 +8,11 @@ public class Alien {
         System.out.println("Object Created");
     }
 
+    public Alien(int age, Laptop lap) {
+        this.age = age;
+        this.lap = lap;
+    }
+
     public int getAge() {
         return age;
     }
