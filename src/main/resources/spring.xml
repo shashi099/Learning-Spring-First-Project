@@ -55,4 +55,8 @@ it will match it will call the setter and getter of that class
     <bean id="com1" class="org.example.Desktop">
     </bean>
 
+<!--    lazy-init="true" means the object will be created whenever the context.getBean("com1") will be called-->
+<!--    <bean id="com1" class="org.example.Desktop" lazy-init="true">-->
+<!--    </bean>-->
+
 </beans>
