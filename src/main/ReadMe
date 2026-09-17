@@ -17,3 +17,29 @@ ye line object create karta hai
 Aur ye line object call karta hai
     context.getBean("alien");
 
+// SCOPES - .Singleton .Prototype
+
+BY DEFAULT THE SCOPE IS SINGLETON.
+
+so when we write once -- <bean id="alien" class="org.example.Alien"></bean>
+             AND
+    Alien obj1 = (Alien) context.getBean("alien");
+            obj1.code();
+            obj1.age = 21;
+            System.out.println(obj1.age);
+
+    Call two times it creates only one object and call the same object again and again
+
+     Alien obj2 = (Alien) context.getBean("alien");
+            obj2.code();
+            System.out.println(obj2.age);
+
+JAB HUM SCOPE KO CHANGE KAR DENGE PROTOTYPE
+
+<bean id="alien" class="org.example.Alien" scope="prototype">
+</bean>
+
+to ab jab bhi app ke under
+Alien obj1 = (Alien) context.getBean("alien");
+CALL KIYA JAYEGA TO HAR BAAR EK NAYA OBJECT CREATE HOGA
+

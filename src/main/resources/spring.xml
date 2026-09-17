@@ -12,9 +12,15 @@
 <!--    <bean id="alien2" class="org.example.Alien">-->
 <!--    </bean>-->
 
-    <!-- ID IS OPTIONAL   -->
+    <!-- ID IS OPTIONAL  AND prototype means when we write in app.java
+    get.Bean() everytime it will create a new object -->
+
+<!--    <bean id="alien" class="org.example.Alien" scope="prototype">-->
+<!--    </bean>-->
 
     <bean id="alien" class="org.example.Alien">
+<!--        setter injection for set the value of the variable -->
+        <property name="age" value="21"></property>
     </bean>
 
     <bean id="lap" class="org.example.Laptop">
