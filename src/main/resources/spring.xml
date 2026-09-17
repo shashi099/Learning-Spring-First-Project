@@ -18,7 +18,21 @@
 <!--    <bean id="alien" class="org.example.Alien" scope="prototype">-->
 <!--    </bean>-->
 
-    <bean id="alien" class="org.example.Alien">
+    <!--        AUTOWIRE BY TWO TYPES BYNAME OR BYTYPE -->
+    <bean id="alien" class="org.example.Alien" autowire="byType">
+
+<!--    ref="com" will search the object name com and if
+it will match it will call the setter and getter of that class
+-->
+<!--        FOR LAPTOP OBJECT-->
+        <property name="age" value="21"/>
+<!--        <property name="com" ref="com"/>-->
+
+<!--        FOR DESKTOP OBJECT    -->
+<!--        <property name="age" value="21"/>-->
+<!--        <property name="com" ref="com1"/>-->
+
+
 <!--        setter injection for set the value of the variable -->
 <!--        <property name="age" value="21"></property>-->
 
@@ -27,20 +41,18 @@
 <!--        <property name="lap" ref="lap1" ></property>-->
 
 <!--        Constructor Injection-->
-        <constructor-arg index="0" value="21"/>
-        <constructor-arg index="1" ref="lap1"/>
+<!--        <constructor-arg index="0" value="21"/>-->
+<!--        <constructor-arg index="1" ref="lap1"/>-->
 
 <!--        <constructor-arg name="age" value="21"/>-->
 <!--        <constructor-arg name="lap" ref="lap1"/>-->
 
-
-
     </bean>
 
-    <bean id="lap" class="org.example.Laptop">
+    <bean id="com" class="org.example.Laptop" primary="true">
     </bean>
 
-    <bean id="lap1" class="org.example.Laptop">
+    <bean id="com1" class="org.example.Desktop">
     </bean>
 
 </beans>
